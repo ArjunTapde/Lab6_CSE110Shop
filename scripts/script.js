@@ -18,7 +18,7 @@ window.addEventListener('DOMContentLoaded', async () => {
   dataStored.forEach( product =>
     {
       let productEL = document.createElement('product-item');
-      //productEl = new ProductItem(product.) imageLink, productName, productPrice
+
       productID = product.id
       imageLink = product.image;
       productName = product.title;
@@ -26,14 +26,6 @@ window.addEventListener('DOMContentLoaded', async () => {
 
       productEL = new ProductItem(productID, imageLink, productName, productPrice);
       productListEL.appendChild(productEL);
-
-
     })
-
-
-
-
-
-
 });
 

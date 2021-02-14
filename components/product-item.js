@@ -15,8 +15,6 @@ class ProductItem extends HTMLElement {
   {
     let refreshProof = window.localStorage;
 
-    
-
     super();
     let shadow = this.attachShadow({mode: 'open' });
 
@@ -34,14 +32,11 @@ class ProductItem extends HTMLElement {
 
     // for 1st p element
     const title = listElement.appendChild(document.createElement('p'));
-    //title.setAttribute('class', productName);
     title.innerHTML = productName;
 
     // for 2nd p element
     const price = listElement.appendChild((document.createElement('p')));
-    //price.setAttribute('class', productPrice);
     price.innerHTML = "$" + productPrice;
-
 
 
     // for button element
@@ -91,11 +86,6 @@ class ProductItem extends HTMLElement {
     
     });
 
- 
-
-
-
-
     // for CSS
     const linkElem = document.createElement('link');
     linkElem.setAttribute('rel', 'stylesheet');
@@ -105,17 +95,6 @@ class ProductItem extends HTMLElement {
     shadow.appendChild(linkElem);
     shadow.appendChild(listElement);
   }
-    
-
-
-
-
-    
-
-    
-
-
-
 }
 
 customElements.define('product-item', ProductItem);
